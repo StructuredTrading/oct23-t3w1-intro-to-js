@@ -234,19 +234,24 @@ let person = {
 	}
 }
 
+
 function improvedTeamLogging(pokemonTeam) {
 	let sortedReversedTeam = pokemonTeam.sort().reverse();
+
 	sortedReversedTeam.forEach(pokemonName => {
 		console.log(pokemonName);
 	});
 }
 
-person.listFavouritePokemon(
-	["pikachu", "blastoise"], 
-	improvedTeamLogging
-);
+const capitilisedNameLogging = (pokemonTeam) => {
+	pokemonTeam.forEach(pokemonName => {
+		console.log(pokemonName.toUppercase());
+	});
+}
 
 
+
+person.listFavouritePokemon(["pikachu", "blastoise"], improvedTeamLogging);
 
 // person.greeting("message");
 // person.farewell("message");
